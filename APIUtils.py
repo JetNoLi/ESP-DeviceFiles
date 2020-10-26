@@ -21,7 +21,7 @@ def connectToWifi(ssid, psk):
         while not wlan.isconnected():
             pass                                #wait until connection is established
     
-    print("Connected to", ssid)
+    #print("Connected to", ssid)
 
 
 
@@ -137,8 +137,8 @@ def getPinList():
         count = 0                               #index in pinList 0-17         
 
         for pinData in pinRead:
-            print(count)
-            print(pinData)
+            #print(count)
+            #print(pinData)
     
             if count == config.pinCount:        #on Timer
                 if pinData == "u":
@@ -159,12 +159,12 @@ def getPinList():
             elif pinData == "u":                 #unitialized pin
                 pins.append("u")
                 IOlist.append("u")
-                print("no newline")
+                #print("no newline")
 
             elif pinData.strip("\n") == "u":
                 pins.append("u")
                 IOlist.append("u")
-                print("newline")
+                #print("newline")
 
 
             elif pinData in functionList:       #is ADC or digitalRead
@@ -230,7 +230,7 @@ def getPinList():
 
             count += 1
 
-    print(pins)
+    #len(pins)
     return pins, IOlist, timer, SPISetup
     
                 

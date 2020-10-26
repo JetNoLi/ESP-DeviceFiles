@@ -194,7 +194,7 @@ timerFunction = False       #stores the CB method for timer
 #timerValue in the form functionName for CB, pinNum
 if timerValue is not None:
     #must still map callback to pin and init pin
-    print(pins)
+    #print(pins)
     timer, pinNum, func = functions.timedInterrupt(timerValue[1], timerValue[0], timerValue[2], timerCB)
     pins[config.pinCount] = int(pinNum)
     timerFunction = callbackMap[func]
